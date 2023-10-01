@@ -19,11 +19,11 @@ interface A{
 	boolean equals(Object o);
 }
 
-public class Fi implements A {
+public abstract class Fi implements A {
 	
-	public void run() {
-		System.out.println("Normal Running....");
-	}
+//	public void run() {
+//		System.out.println("Normal Running....");
+//	}
 
 	public static void main(String[] args) {
 		A i=()->{System.out.println("Running....");};
