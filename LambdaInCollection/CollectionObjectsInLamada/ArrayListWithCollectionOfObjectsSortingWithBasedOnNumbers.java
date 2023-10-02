@@ -28,15 +28,21 @@ public class ArrayListWithCollectionOfObjectsSortingWithBasedOnNumbers {
 		
 		System.out.println(l);
 		
-		//for sorting based on numbers or characters we use compare() method that avaliable in Comparator interface.
-		//for sorting based on  Strings we use compareTo() method that avaliable in String class.
+		//for sorting based on numbers or characters in custom format we use compare() method that available in Comparator interface.
+		//for sorting based on  Strings we use compareTo() method that available in String class.which is overridden from comparable interface.
+		//compareTo() method in comparable interface is used to sort any kind of homogeneous data in default order
 		
 		
 		//sort collection Objects based on id.
 		
 		//SORTING OBJECT BASED ON ID.
 		
-		//Syntax:-  Collections.sort(Collection name,Comaparator object);
+		//Syntax:-  Collections.sort(Collection name,Comparator object);
+		
+//		Comparator<ArrayListWithCollectionOfObjectsSortingWithBasedOnNumbers> c=(e1,e2)->(e1.id < e2.id)? -1 :(e1.id > e2.id)? 1 : 0;
+//		Collections.sort(l,c);
+		
+		// or you can pass directly lambda expression to sort method.
 		
 		Collections.sort(l,(e1,e2)->(e1.id < e2.id)? -1 :(e1.id > e2.id)? 1 : 0);
 		

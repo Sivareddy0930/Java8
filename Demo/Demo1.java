@@ -6,13 +6,11 @@ import java.util.Arrays;
 public class Demo1 {
 
     public static boolean isPermutation(String s1, String s2) {
-        if (s1.length() != s2.length()) {
-            return false;
-        }
+      
 
         char[] charArray1 = s1.toCharArray();
         char[] charArray2 = s2.toCharArray();
-
+        
         Arrays.sort(charArray1);
         Arrays.sort(charArray2);
 
