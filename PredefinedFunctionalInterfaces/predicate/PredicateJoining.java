@@ -10,7 +10,7 @@ public class PredicateJoining {
 	public static void main(String[] args) {
 		// print only even numbers from array.
 		
-		int[] arr= {4,8,16,3,5,6,0,19,200,5000,69,65,97,48};
+		int[] arr= {4,8,16,3,5,6,0,19,4,5000,69,16,97,48};
 		
 		Predicate<Integer> p1=a->a%2==0;
 	
@@ -64,6 +64,18 @@ public class PredicateJoining {
 				System.out.println(i);
 			}
 		}
+		
+		//----------------------------------------------------------------------------------
+				System.out.println("------------------------------------------------------------------------------------");
+				//print only duplicate elements.(elements available more than one time)
+				//isEqual() 
+				
+				for(Integer i:arr) {
+					if(p1.negate().test(i)){
+						//p1 condition is used to check even number or not .but due to negate() it print odd values
+						System.out.println(i);
+					}
+				}
 
 		
 			
