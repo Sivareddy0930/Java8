@@ -34,6 +34,10 @@ public class PredicateJoining {
 		System.out.println("------------------------------------------------------------------------------------");
 		//print values that is Even and >10 from array.
 		
+		
+		
+		//Predicate chaining or joining
+		
 		for(Integer i:arr) {
 			if(p1.and(p2).test(i)){
 				//if both predicate  satisfy then it will return true.
