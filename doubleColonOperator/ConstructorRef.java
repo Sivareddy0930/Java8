@@ -1,6 +1,6 @@
 package doubleColonOperator;
 
-//Suppose functional interface method return an object of class.
+//If Suppose functional interface method return an object of class.
 //At this point we use Constructor reference.
 //it is easy form or alternative form of LAMBDA expression.
 
@@ -12,6 +12,7 @@ package doubleColonOperator;
 //Arguments are must be same in both interface method and provided constructor(constructor we are referring).
 //no need to check about rest of things like AccesModifier and name of constructor.
 
+//Here our m1() method implementation is Constructor of Message.
 
 
 interface A{
