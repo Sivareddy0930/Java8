@@ -157,6 +157,7 @@ public class AllMethodswithFilter {
 				System.out.println("toArray():-");
 				
 						Object[] gg=al.stream().toArray();
+//						System.out.println(gg);
 						System.out.println(Arrays.toString(gg));
 				
 					
