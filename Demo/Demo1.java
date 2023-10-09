@@ -1,31 +1,75 @@
 package Demo;
 
+import java.lang.Math;
+import java.util.Scanner;
 
-import java.util.Arrays;
+class Circle {
+    private double radius;
 
-public class Demo1 {
-
-    public static boolean isPermutation(String s1, String s2) {
-      
-
-        char[] charArray1 = s1.toCharArray();
-        char[] charArray2 = s2.toCharArray();
-        
-        Arrays.sort(charArray1);
-        Arrays.sort(charArray2);
-
-        return Arrays.equals(charArray1, charArray2);
+    public Circle(double radius) {
+        this.radius = radius;
     }
 
-    public static void main(String[] args) {
-        String s1 = "abcde";
-        String s2 = "cdbea";
-
-        String s3 = "abcde";
-        String s4 = "cdbaea";
-
-        System.out.println(isPermutation(s1, s2));
-        System.out.println(isPermutation(s3, s4));
+    public int getArea() {
+        double area = Math.PI * radius * radius;
+        return (int) Math.ceil(area);
     }
 }
 
+class Rectangle {
+    private double width;
+    private double height;
+
+    public Rectangle(double width, double height) {
+        this.width = width;
+        this.height = height;
+    }
+
+    public int getArea() {
+        double area = width * height;
+        return (int) Math.ceil(area);
+    }
+}
+
+class Square {
+    private double width;
+
+    public Square(double width) {
+        this.width = width;
+    }
+
+    public int getArea() {
+        double area = width * width;
+        return (int) Math.ceil(area);
+    }
+}
+
+public class Demo1 {
+    public static void main(String[] args) {
+    	
+    	Scanner sc =new Scanner(System.in);
+    	
+    	float radius=sc.nextFloat();
+        Circle circle = new Circle(radius);
+        System.out.println( circle.getArea());
+        
+        float width=sc.nextFloat();
+        float height=sc.nextFloat();
+        Rectangle rectangle = new Rectangle(width,height);
+        System.out.println( rectangle.getArea());
+        
+         radius=sc.nextFloat();
+        Circle circle2 = new Circle(radius);
+        System.out.println( circle2.getArea());
+
+         width=sc.nextFloat();
+        Square square = new Square(width);
+        System.out.println( square.getArea());
+        
+         width=sc.nextFloat();
+        height=sc.nextFloat();
+        Rectangle rectangle2 = new Rectangle(width,height);
+        System.out.println( rectangle2.getArea());
+        
+    }
+}
