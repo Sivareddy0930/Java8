@@ -6,7 +6,7 @@ import java.util.Iterator;
 
 public class WithLambdaInMultiThreading {
 
-	public static void main(String[] args) {//thread 1
+	public static void main(String[] args) {//this is thread 1 
 
 		
 		Runnable r=()->{

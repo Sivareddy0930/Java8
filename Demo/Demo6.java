@@ -1,33 +1,20 @@
 package Demo;
 
+import java.util.Arrays;
+import java.util.List;
 import java.util.TreeSet;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class Demo6 {
 
-	public static TreeSet shortArray(int arr1[],int arr2[]) {
-		
-		int n1=arr1.length+arr2.length;
-		
-		TreeSet ts=new TreeSet();
-		
-		for(int i=0;i<arr1.length;i++) {
-			ts.add(arr1[i]);
-		}
-		for(int i=0;i<arr2.length;i++) {
-			ts.add(arr2[i]);
-		}
-					
-		return ts;
-		
-		
-		
-		
-		
-	}
+	
 	public static void main(String[] args) {
 		int arr1[]= {1,3,5,7};
-		int arr2[]= {2,6,8};
-		System.out.println(shortArray(arr1,arr2));
+	
+		List<int[]> al=Stream.of(arr1).unordered().collect(Collectors.toList());
+		System.out.println(al);
+	
 	}
 
 }
