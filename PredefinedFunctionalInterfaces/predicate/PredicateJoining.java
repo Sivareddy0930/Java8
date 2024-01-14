@@ -74,14 +74,12 @@ public class PredicateJoining {
 				//print only duplicate elements.(elements available more than one time)
 				//isEqual() 
 				
-				for(Integer i:arr) {
-					if(p1.negate().test(i)){
-						//p1 condition is used to check even number or not .but due to negate() it print odd values
-						System.out.println(i);
-					}
-				}
-
-		
+//				for(Integer i:arr) {
+//					if(p1.negate().test(i)){
+//						//p1 condition is used to check even number or not .but due to negate() it print odd values
+//						System.out.println(i);
+//					}
+//				}
 			
 	}
 

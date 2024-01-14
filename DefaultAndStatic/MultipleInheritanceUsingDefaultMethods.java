@@ -24,8 +24,8 @@ public class MultipleInheritanceUsingDefaultMethods implements E,F {
 		
 		System.out.println("This is overridden method");
 		
-		E.super.m1();
-		F.super.m1();
+//		E.super.m1();
+//		F.super.m1();
 		
 		
 	}

@@ -25,6 +25,7 @@ public class MethodRefWithList {
 		al.forEach((s)->System.out.println(i.m1(s)));
 		
 		
+		
 		}
 
 }
