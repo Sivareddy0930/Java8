@@ -11,6 +11,7 @@ public class SortListOfStringsBasedonLength {
 		
 	//SortListOfStringsBasedonLength
 		List<String> list=new ArrayList<>();
+		list.add("okay");
 		list.add("I");
 		list.add("am");
 		list.add("siva");
@@ -22,8 +23,9 @@ public class SortListOfStringsBasedonLength {
 		list.add("okay");
 		
 		
-	    List<String> sorted= list.stream().sorted(Comparator.comparing(String::length)).collect(Collectors.toList());
+		List<String> sorted= list.stream().sorted(Comparator.comparing(String::length)).collect(Collectors.toList());
 	    System.out.println(sorted);
+	    
 	    
 	    
 

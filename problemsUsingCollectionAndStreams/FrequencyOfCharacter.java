@@ -6,6 +6,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.function.Function;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class FrequencyOfCharacter {
 
@@ -21,11 +22,16 @@ public class FrequencyOfCharacter {
 		Map<Character, Long> Frequency=s.chars().mapToObj(n -> (char)n).collect(Collectors.groupingBy(Function.identity(),Collectors.counting()));
 		System.out.println(Frequency);
 		
+		Map<String, Long> Freq=Stream.of(s.replaceAll(" ", "").split("")).collect(Collectors.groupingBy(Function.identity(),Collectors.counting()));
+		System.out.println(Freq);
+		
+		
+		
 		//remove spaces.
 		Map<Character, Long> Frequency1=s.replaceAll(" ", "").chars().mapToObj(n -> (char)n).collect(Collectors.groupingBy(Function.identity(),Collectors.counting()));
 		System.out.println(Frequency1);
 		
-		//fequency of numbers.
+		//fequency of numbers in an Array
 		int arr[]= {1,2,3,4,5,4,8,2,1,9,4,4,2,4,4};
 		//Arrays.stream(arr) it retuens IntStream
 		Map<Integer,Long > freq=Arrays.stream(arr).boxed().collect(Collectors.groupingBy(Function.identity(),Collectors.counting()));
