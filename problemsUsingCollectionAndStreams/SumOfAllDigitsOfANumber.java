@@ -1,5 +1,6 @@
 package problemsUsingCollectionAndStreams;
 
+import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 public class SumOfAllDigitsOfANumber {
@@ -9,7 +10,8 @@ public class SumOfAllDigitsOfANumber {
 		
 		//Sum Of All Digits Of A Number.
 		
-		int sum=Stream.of((num+"").split("")).mapToInt(Integer::parseInt).sum();
+		int sum=Stream.of((num+"").split("")).mapToInt(Integer::valueOf).sum();
+		//int sum=Stream.of((num+"").split("")).mapToInt(Integer::parseInt).sum();
 		System.out.println(sum);
 		
 		

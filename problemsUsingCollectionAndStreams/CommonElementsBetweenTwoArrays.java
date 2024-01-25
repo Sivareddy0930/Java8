@@ -25,7 +25,7 @@ public class CommonElementsBetweenTwoArrays {
         List<Integer> list1 = Arrays.asList(12, 56, 17, 21, 94, 34);
 //		System.out.println(list.containsAll(list1));
 		
-		list1.stream().filter(list::contains).forEach(System.out::println);
+		list1.stream().filter(value -> list.contains(value)).forEach(System.out::println);
 		
 		
 		

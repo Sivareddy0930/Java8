@@ -28,14 +28,15 @@ public class ReverseIntegerArray {
 		
 		//------------------------------------------------------------------------------------------------
 		
-				List<Integer> newList=Arrays.stream(arr).boxed().collect(Collectors
+				Object[] newArray1=Arrays.stream(arr).boxed().collect(Collectors
 						.collectingAndThen(Collectors.toList(), 
 								result -> {Collections.reverse(result);
-								return result;
+								Object[] objArray=result.toArray();
+								return objArray;
 						}));
 		
-				int arr1[]=newList.stream().mapToInt(Integer::intValue).toArray();
-				System.out.println(Arrays.toString(arr1));
+				//int arr1[]=newList.stream().mapToInt(Integer::intValue).toArray();
+				System.out.println(Arrays.toString(newArray1));
 		
 	}
 

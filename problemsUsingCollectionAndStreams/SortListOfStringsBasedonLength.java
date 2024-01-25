@@ -9,7 +9,7 @@ public class SortListOfStringsBasedonLength {
 
 	public static void main(String[] args) {
 		
-	//SortListOfStringsBasedonLength
+	//Sort List Of Strings Based on Length.
 		List<String> list=new ArrayList<>();
 		list.add("okay");
 		list.add("I");

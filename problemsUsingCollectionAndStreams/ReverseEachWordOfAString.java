@@ -25,7 +25,7 @@ public class ReverseEachWordOfAString {
 		
 		//----------------------------------------
 		
-		String s1=Stream.of(s.split(" ")).map(word -> new StringBuffer(word).reverse().toString()).collect(Collectors.joining(" "));
+		String s1=Stream.of(s.trim().split(" ")).map(value -> new StringBuffer(value).reverse().toString()).collect(Collectors.joining(" "));
 		System.out.println(s1);//I ma morf hsedarParhdnA
 	}
 
