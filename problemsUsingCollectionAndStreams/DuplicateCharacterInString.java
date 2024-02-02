@@ -1,9 +1,10 @@
 package problemsUsingCollectionAndStreams;
 
-import java.util.Arrays;
-import java.util.HashSet;
-import java.util.Iterator;
-import java.util.Set;
+import java.util.List;
+import java.util.Map;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class DuplicateCharacterInString {
 
@@ -15,23 +16,21 @@ public class DuplicateCharacterInString {
 		
 		 String inputString = "Java Concept Of The Day";
 		
-		Set s=new HashSet<>();
-		for(int i=0;i< inputString.length();i++) {
-			
-			boolean b=!s.add(inputString.charAt(i));
-			if(b) {
-				System.out.println(arr[i]);
-			}
-		}
-		System.out.println(s);
-		
-		System.out.println("---------------------------------------------------------");
 		//java 8 streams.
+		 
 		
-		Set s1=new HashSet<>();
-		Arrays.stream(arr).filter(value -> !s1.add(value)).forEach(System.out::println);
-		System.out.println(s1);
+			Map<String, Long> resultMap=Stream.of(inputString.trim().replaceAll(" ", "").toLowerCase().split("")).collect(Collectors.groupingBy(Function.identity(),Collectors.counting()));
+			System.out.println(resultMap);
+	
+	
+				
+				
+			resultMap.entrySet().stream().filter(entery -> entery.getValue()>1).forEach(entry ->System.out.println(entry.getKey()));
+			List al=resultMap.entrySet().stream().filter(entery -> entery.getValue()>1).map(entry -> entry.getKey() ).collect(Collectors.toList());
+			System.out.println(al);
 		
+		
+
 		
 	}
 
