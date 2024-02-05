@@ -46,6 +46,7 @@ public class ArrayListWithCollectionOfObjectsSortingWithBasedOnNumbers {
 		
 		Collections.sort(l,(e1,e2)->(e1.id < e2.id)? -1 :(e1.id > e2.id)? 1 : 0);
 		
+		Collections.sort(l,(e1,e2)-> (e1.name.length() < e2.name.length())? -1 : (e1.name.length() > e2.name.length()) ? 1 :0);
 		
 		System.out.println(l);
 		

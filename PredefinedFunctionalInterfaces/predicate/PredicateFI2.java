@@ -26,9 +26,6 @@ public class PredicateFI2 {
 				System.out.println(s1);
 			}
 		}
-		
-
-		
 			
 	}
 
