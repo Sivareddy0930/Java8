@@ -1,75 +1,39 @@
 package Demo;
 
-import java.lang.Math;
-import java.util.Scanner;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 
-class Circle {
-    private double radius;
 
-    public Circle(double radius) {
-        this.radius = radius;
+class Demo1 {
+    public static double findMedianSortedArrays(int[] nums1, int[] nums2) {
+        int[] arr=IntStream.concat(Arrays.stream(nums1),Arrays.stream(nums2)).sorted().toArray();
+        if(arr.length%2==0){
+        	
+           int value= arr.length/2;
+           System.out.println(value);
+           return (arr[value-1]+arr[value]) / 2.0 ;
+        }
+        else{
+        	System.out.println("odd");
+            int value2= (int)Math.ceil(arr.length/2);
+            return arr[value2];
+            
+        }
     }
 
-    public int getArea() {
-        double area = Math.PI * radius * radius;
-        return (int) Math.ceil(area);
-    }
-}
+    public static void main(String args[]){
 
-class Rectangle {
-    private double width;
-    private double height;
-
-    public Rectangle(double width, double height) {
-        this.width = width;
-        this.height = height;
-    }
-
-    public int getArea() {
-        double area = width * height;
-        return (int) Math.ceil(area);
-    }
-}
-
-class Square {
-    private double width;
-
-    public Square(double width) {
-        this.width = width;
-    }
-
-    public int getArea() {
-        double area = width * width;
-        return (int) Math.ceil(area);
-    }
-}
-
-public class Demo1 {
-    public static void main(String[] args) {
-    	
-    	Scanner sc =new Scanner(System.in);
-    	
-    	float radius=sc.nextFloat();
-        Circle circle = new Circle(radius);
-        System.out.println( circle.getArea());
+    	 int[] nums= {2,5,6,0,0,1,2};
+         List<Integer> al= Arrays.stream(nums).boxed().collect(Collectors.toList());
+         Collections.rotate(al,5);
+         
+         int[] arr = al.stream().mapToInt(Integer::intValue).toArray();
+         System.out.println(al);
+         
         
-        float width=sc.nextFloat();
-        float height=sc.nextFloat();
-        Rectangle rectangle = new Rectangle(width,height);
-        System.out.println( rectangle.getArea());
-        
-         radius=sc.nextFloat();
-        Circle circle2 = new Circle(radius);
-        System.out.println( circle2.getArea());
-
-         width=sc.nextFloat();
-        Square square = new Square(width);
-        System.out.println( square.getArea());
-        
-         width=sc.nextFloat();
-        height=sc.nextFloat();
-        Rectangle rectangle2 = new Rectangle(width,height);
-        System.out.println( rectangle2.getArea());
-        
-    }
+    } 
+    
 }

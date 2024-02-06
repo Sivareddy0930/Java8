@@ -1,5 +1,6 @@
 package problemsUsingCollectionAndStreams.RealtimeExample;
 
+import java.util.Collections;
 import java.util.List;
 import java.util.function.Consumer;
 
@@ -12,6 +13,7 @@ public class CustomerActions {
 		Consumer<Customers> c= cobj -> System.out.println(cobj);
 		
 		customerList.stream().forEach(c);
+		
 		
 		
 		
