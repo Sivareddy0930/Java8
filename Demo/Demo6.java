@@ -9,40 +9,39 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 public class Demo6 {
-    public static void main(String[] args) {
-        System.out.println(StringChallenge("aabbcde")); // Output: 2a2b1cidie
-        System.out.println(StringChallenge("wwwbbbw")); // Output: 3w3b1w
-    }
 
-    public static String StringChallenge(String str) {
-    	
-    	int count=1;
-    	StringBuilder str1=new StringBuilder();
-    	
-    	for(int i=0;i<str.length();i++) {
-    		if(i< str.length()-1 && str.charAt(i)== str.charAt(i+1)) {
-    			count++;
-    		}
-    		else {
-    			 str1 =  str1.append(count).append(str.charAt(i));
-    			 count=1;
-    		}
-    	}
-    	
-    	//--------------------------------------------
-    	//System.out.println(str1);
-    	str1.append("2cwrvj8f");
-    	
-    	for(int i=3;i<str1.length();i=i+4) {
-    		str1.setCharAt(i, '_');
-    	}
-    	
-    	  	
-		return str1.toString();
-        
-        }
+	  public static String stringChallenge(String str) {
+	    StringBuilder sb = new StringBuilder();
+	    int count = 1;
+	    for (int i = 1; i < str.length(); i++) {
+	      if (str.charAt(i) == str.charAt(i - 1)) {
+	        count++;
+	      } else {
+	        sb.append(count);
+	        sb.append(str.charAt(i - 1));
+	        count = 1;
+	      }
+	    }
+	    sb.append(count);
+	    sb.append(str.charAt(str.length() - 1));
+	    return sb.toString();
+	  }
 
-        
-    
-}
+	  public static void main(String[] args) {
+	    String str = "aabbcde";
+	    String compressed = stringChallenge(str);
+
+	    // Concatenate with ChallengeToken (replace with your actual token)
+	    String combined = compressed + "2cwrvj8f";
+
+	    // Replace every fourth character with an underscore
+	    StringBuilder finalOutput = new StringBuilder();
+	    for (int i = 0; i < combined.length(); i++) {
+	      finalOutput.append(i % 4 == 3 ? '_' : combined.charAt(i));
+	    }
+
+	    System.out.println(finalOutput);
+	  }
+	}
+
 
