@@ -9,7 +9,8 @@ public class Test5 {
 		String s="This is java Program";
 		s=s.toLowerCase().replaceAll(" ", "");
 		
-//		 boolean anyMatch = s.chars().mapToObj(value ->(char)value).anyMatch(val -> "aeiou".(val));
+		 boolean anyMatch = s.chars().mapToObj(value ->(char)value).anyMatch(val -> "aeiou".indexOf(val) != -1);
+		 System.out.println(anyMatch);
 
 	}
 

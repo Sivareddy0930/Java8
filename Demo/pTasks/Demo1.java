@@ -14,6 +14,9 @@ public class Demo1 {
 		System.out.println(s);
 //		s.add(2,"and");
 		System.out.println("hi "+s.get(0)+","+s.get(1)+" and "+s.get(2));
+		
+		
+		
 
 	}
 
