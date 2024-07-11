@@ -1,6 +1,6 @@
 package doubleColonOperator;
 
-//method reference is used to refer the method of  functional interface.
+//method reference is used to refer the method of  functional interface to an existing method.
 //it is easy form or alternative form of LAMBDA expression.
 
 //REference of static method ====> ClassNAme::MethodName;

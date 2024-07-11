@@ -7,7 +7,7 @@ interface interf1{
 }
  class MethodRefWithInstance {
 	
-	public  void m1() {
+	public void m1() {
 		System.out.println("instance method m1() which is referring interface method ");
 	}
 
