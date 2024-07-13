@@ -6,21 +6,26 @@ public class PredicateExample2 {
 	public static void main(String[] args) {
        int arr[]= {1,2,3,4,55,1,3,28,9,8,};
        
-       Set<Integer> encountered = new HashSet<>();
        
-       Predicate<Integer> isDuplicate = n -> !encountered.add(n);
        
-       List al=new ArrayList();
+       Set<Integer> nonDuplicateElements = new HashSet<>();
        
-       for(Integer a:arr) {
-    	   
-    	   if(isDuplicate.test(a)){
-    		      al.add(a);		   
-    	   }
-    	   
-       }
-       System.out.println(al);
        
+       List<Integer> duplicateElements =new ArrayList<>();
+       
+      
+       
+      Predicate<Integer> check =  value -> nonDuplicateElements.add(value);
+      
+      for(Integer value:arr) {
+   	   if(!nonDuplicateElements.add(value)) {
+   		duplicateElements.add(value);
+   	   }
+      }
+      
+      System.out.println(duplicateElements);
+      
+     
 	}
 
 }
